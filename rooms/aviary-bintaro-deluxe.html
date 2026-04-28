@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Aviary Hotel Bintaro – Deluxe Room Detail</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+ 
+  <link rel="stylesheet" href="../css/global.css">
+
+</head>
+
+<body>
+  <div class="shell">
+    <!-- HEADER (same pattern) -->
+    <header class="top-bar">
+      <div class="brand">Indonesian Hotels Insights</div>
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../hotels/aviary-bintaro.html#rooms">Back to Rooms</a>
+        <a href="#room-video">Room Video</a>
+        <a href="#room-gallery">Photo Evidence</a>
+        <a href="#room-checklist">Room Checklist</a>
+      </nav>
+    </header>
+
+ 
+ 
+    <!-- MAIN CONTENT -->
+    <main class="content">
+
+           
+       
+        <!-- 1) ROOM VIDEO (top) -->
+      <section class="insights-section" id="room-video">
+        <h3 class="insights-heading">Room Video</h3>
+
+        <aside class="media-card video-narrow">
+          <div class="media-thumb">
+            <!-- Replace the embed URL -->
+            <iframe
+              src="https://www.youtube.com/embed/Hu8XEtWERTg?start=12"
+              title="Aviary Bintaro – Deluxe Room Video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </aside>
+      </section>
+
+      <!-- 2) ROOM PHOTO EVIDENCE GALLERY (click to lightbox) -->
+<section class="insights-section" id="room-gallery">
+  <h3 class="insights-heading">Photo Evidence Gallery</h3>
+
+  <section class="amenity-gallery" aria-label="Deluxe room photo album">
+    <div class="gallery-main">
+      <button class="gbtn gprev" type="button" id="roomGPrev" aria-label="Previous image">‹</button>
+
+      <img id="roomMainImg"
+           src="deluxe/kingsizebed.jpg"
+           alt="Deluxe room photo"
+           loading="lazy">
+
+      <div class="gcaption" id="roomCaption">Deluxe Room – Photo 01</div>
+
+      <button class="gbtn gnext" type="button" id="roomGNext" aria-label="Next image">›</button>
+
+      <div class="gcount" id="roomCounter">1 / 8</div>
+    </div>
+
+    <div class="gallery-thumbs" id="roomThumbs" aria-label="Room gallery thumbnails">
+
+      <!-- IMPORTANT: use paths relative to deluxe-room.html -->
+      
+      <button class="thumb is-active" type="button"
+              data-full="../images/aviary/bintaro/rooms/deluxe/IMG_6384.jpg"
+              data-title="Deluxe Room No. 616">
+        <img src="../images/aviary/bintaro/rooms/deluxe/IMG_6384.jpg" alt="Photo 1">
+      </button>  
+
+      <button class="thumb" type="button"
+              data-full="../images/aviary/bintaro/rooms/deluxe/entryway.jpg"
+              data-title="Foyer/Entryway">
+        <img src="../images/aviary/bintaro/rooms/deluxe/entryway.JPG" alt="Photo 02">
+      </button>   
+
+      <button class="thumb" type="button"
+              data-full="../images/aviary/bintaro/rooms/deluxe/hangingspace.jpg"
+              data-title="Hanging Space">
+        <img src="../images/aviary/bintaro/rooms/deluxe/hangingspace.jpg" alt="Photo 03">
+      </button>
+
+      <button class="thumb" type="button"
+              data-full="../images/aviary/bintaro/rooms/deluxe/dressing-area.jpg"
+              data-title="Dressing Area">
+        <img src="../images/aviary/bintaro/rooms/deluxe/dressing-area.jpg" alt="Photo 04">
+      </button>
+  
+      <button class="thumb" type="button"
+              data-full="../images/aviary/bintaro/rooms/deluxe/kingsizebed.jpg"
+              data-title="King Size Bed (Single)">
+        <img src="../images/aviary/bintaro/rooms/deluxe/kingsizebed.jpg" alt="Photo 05">
+      </button>
+
+      <button class="thumb" type="button"
+              data-full="../images/aviary/bintaro/rooms/deluxe/complimentary-beverages.jpg"
+              data-title="Complimentary Beverages">
+        <img src="../images/aviary/bintaro/rooms/deluxe/complimentary-beverages.jpg" alt="Photo 06">
+      </button>
+
+      <button class="thumb" type="button"
+              data-full="../images/aviary/bintaro/rooms/deluxe/complimentary-toiletries.jpg"
+              data-title="Complimentary Toiletries">
+        <img src="../images/aviary/bintaro/rooms/deluxe/complimentary-toiletries.jpg" alt="Photo 07">
+      </button>
+
+
+      <button class="thumb" type="button"
+              data-full="../images/aviary/bintaro/rooms/deluxe/complimentary-stationery&information.jpg"
+              data-title="Complimentary Stationery & Information">
+        <img src="../images/aviary/bintaro/rooms/deluxe/complimentary-stationery&information.jpg" alt="Photo 08">
+      </button>
+ 
+
+
+      
+
+
+
+      <!-- add as many as you want -->
+    </div>
+  </section>
+</section>
+
+
+      <!-- 3) ROOM CHECKLIST (same card-grid pattern as Guest Facilities) -->
+      <article class="insight-card" id="room-checklist" style="display:block;">
+        <div class="insight-title">Room Checklist (Evidence Only)</div>
+<div style="margin: 10px 0 14px;">
+  <label style="display:flex; gap:10px; align-items:center; font-size:0.95rem;">
+   
+    <input type="checkbox" id="showMissingEvidence">
+    Show checklist items without evidence (editing mode)
+  </label>
+</div>
+        <section class="amenities" aria-label="Room checklist">
+ <div class="amenities-grid">
+
+<!-- Bed Type & Size (add as a new card inside your .amenities-grid) -->
+<div class="amenity-group" data-group="bed-type-size">
+  <h3 class="amenity-title">Bed Type; Size</h3>
+  <ul class="amenity-list">
+
+    <!-- Configuration (choose one / or keep both with evidence) -->
+    <li>
+      <button type="button" class="amenity-item amenity-link"
+        data-title="King bed (approx. 180 × 200 cm)"
+        data-images="../images/aviary/bintaro/rooms/deluxe/kingsizebed.jpg">
+        King bed (approx. 180 × 200 cm)
+      </button>
+    </li>
+
+    <li>
+      <button type="button" class="amenity-item amenity-link"
+        data-title="Queen bed (approx. 160 × 200 cm)"
+        data-images="">
+        Queen bed (approx. 160 × 200 cm)
+      </button>
+    </li>
+
+    <li>
+      <button type="button" class="amenity-item amenity-link"
+        data-title="Double bed (approx. 140 × 200 cm)"
+        data-images="">
+        Double bed (approx. 140 × 200 cm)
+      </button>
+    </li>
+
+    <li>
+      <button type="button" class="amenity-item amenity-link"
+        data-title="Twin beds (2 × approx. 90 × 200 cm)"
+        data-images="">
+        Twin beds (2 × approx. 90 × 200 cm)
+      </button>
+    </li>
+
+    <li>
+      <button type="button" class="amenity-item amenity-link"
+        data-title="Single bed (approx. 90 × 200 cm)"
+        data-images="">
+        Single bed (approx. 90 × 200 cm)
+      </button>
+    </li>
+
+    <li>
+      <button type="button" class="amenity-item amenity-link"
+        data-title="Super king bed (approx. 200 × 200 cm)"
+        data-images="">
+        Super king bed (approx. 200 × 200 cm)
+      </button>
+    </li>
+
+    <!-- Helpful supporting observations -->
+    <li>
+      <button type="button" class="amenity-item amenity-link"
+        data-title="Hollywood twin setup (two singles combined)"
+        data-images="">
+        Hollywood twin setup (two singles combined)
+      </button>
+    </li>
+
+    <li>
+      <button type="button" class="amenity-item amenity-link"
+        data-title="Extra bed / rollaway (approx. 90 × 190 cm)"
+        data-images="">
+        Extra bed / rollaway (approx. 90 × 190 cm)
+      </button>
+    </li>
+  </ul>
+</div>
+
+
+
+
+
+  <!-- =========================
+       AMENITIES IN ROOM
+  ========================== -->
+  <div class="amenity-group" data-group>
+    <h3 class="amenity-title">Amenities in Room</h3>
+    <ul class="amenity-list">
+
+      <li><button type="button" class="amenity-item amenity-link"
+  data-title="Air Conditioning"
+  data-images="../images/aviary/bintaro/rooms/deluxe/air-conditioning.jpg">
+  Air Conditioning
+</button></li>
+
+<li><button type="button" class="amenity-item amenity-link"
+  data-title="Balcony"
+  data-images="../images/aviary/bintaro/rooms/deluxe/balcony.jpg">
+  Balcony
+</button></li>
+
+<li><button type="button" class="amenity-item amenity-link"
+  data-title="Ceiling Fan"
+  data-images="">
+  Ceiling Fan
+</button></li>
+
+<li><button type="button" class="amenity-item amenity-link"
+  data-title="Coffee Table"
+  data-images="">
+  Coffee Table
+</button></li>
+
+<li><button type="button" class="amenity-item amenity-link"
+  data-title="Coffee Table w/chair"
+  data-images="">
+  Coffee Table with Chair
+</button></li>
+
+<li><button type="button" class="amenity-item amenity-link"
+  data-title="Direct Dial Phone"
+  data-images="../images/aviary/bintaro/rooms/deluxe/direct-dial-phone.jpg, ../images/aviary/bintaro/rooms/deluxe/direct-dial-phone(2).jpg">
+  Direct Dial Phone
+</button></li>
+
+<li><button type="button" class="amenity-item amenity-link"
+  data-title="Electric Kettle"
+  data-images="../images/aviary/bintaro/rooms/deluxe/kettle.jpg">
+  Electric Kettle
+</button></li>
+
+<li><button type="button" class="amenity-item amenity-link"
+  data-title="Free Wi-Fi"
+  data-images="*../images/aviary/bintaro/rooms/deluxe/*.jpg ">
+  Free Wi-Fi
+</button></li>
+
+<li><button type="button" class="amenity-item amenity-link"
+  data-title="Luggage Rack"
+  data-images="">
+  Luggage Rack
+</button></li>
+
+<li><button type="button" class="amenity-item amenity-link"
+  data-title="Mini Bar"
+  data-images="">
+  Mini Bar
+</button></li>
+
+<li><button type="button" class="amenity-item amenity-link"
+  data-title="Mini-Fridge"
+  data-images="../images/aviary/bintaro/rooms/deluxe/mini-fridge.jpg">
+  Mini-Fridge
+</button></li>
+
+<li><button type="button" class="amenity-item amenity-link"
+  data-title="Safety Box"
+  data-images="../images/aviary/bintaro/rooms/deluxe/safety-box.jpg">
+  Safety Box
+</button></li>
+
+<li><button type="button" class="amenity-item amenity-link"
+  data-title="Satellite TV"
+  data-images="../images/aviary/bintaro/rooms/deluxe/satellite-tv.jpg, ../images/aviary/bintaro/rooms/deluxe/satellite-tv(2).jpg">
+  Satellite TV
+</button></li>
+
+<li><button type="button" class="amenity-item amenity-link"
+  data-title="Tea/Coffee Maker"
+  data-images="">
+  Tea/Coffee Maker
+</button></li>
+
+<li><button type="button" class="amenity-item amenity-link"
+  data-title="Work Desk"
+  data-images="../images/aviary/bintaro/rooms/deluxe/work-desk.jpg, 
+  ../images/aviary/bintaro/rooms/deluxe/work-desk-(3).jpg, 
+  ../images/aviary/bintaro/rooms/deluxe/work-desk-(2).jpg">
+  Work Desk
+</button></li>
+
+
+    </ul>
+  </div>
+
+  <!-- =========================
+       PRIVATE BATHROOM (FIXTURES)
+  ========================== -->
+  <div class="amenity-group" data-group>
+    <h3 class="amenity-title">Bathroom Amenities and Facilities(1)</h3>
+    
+    <h3 class="amenity-title">Sanitary Fixtures</h3>
+    <ul class="amenity-list">
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Bathtub" data-images="">
+        Bathtub
+      </button></li>
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Sink/Vanity Unit" data-images="../images/aviary/bintaro/rooms/deluxe/sink.jpg">
+        Sink / Vanity Unit
+      </button></li>
+      
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Toilet" data-images="../images/aviary/bintaro/rooms/deluxe/toilet.jpg">
+        Toilet
+      </button></li>  
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Walk-in Shower" data-images="../images/aviary/bintaro/rooms/deluxe/walk-in-shower.mp4">
+        Walk-in Shower
+      </button></li>    
+
+
+    </ul>
+
+
+    <h3 class="amenity-title">Personal Care</h3>
+    <ul class="amenity-list">
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Bar Soap" data-images="../images/aviary/bintaro/rooms/deluxe/bar-soap.jpg">
+        Bar Soap
+      </button></li>
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Body & Face Lotion" data-images="">
+        Body & Face Lotion
+      </button></li>
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Body Wash" data-images="../images/aviary/bintaro/rooms/deluxe/shampoo&body-wash.jpg">
+        Body Wash
+      </button></li>    
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Conditioner" data-images="">
+        Conditioner
+      </button></li>
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Shampoo" data-images="../images/aviary/bintaro/rooms/deluxe/shampoo&body-wash.jpg">
+        Shampoo
+      </button></li>
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Tissues" data-images="">
+        Tissues
+      </button></li>
+
+    </ul>
+    <h3 class="amenity-title">Essential Bathroom Items</h3>
+    <ul class="amenity-list">
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Bath Towel" data-images="../images/aviary/bintaro/rooms/deluxe/towels.jpg,../images/aviary/bintaro/rooms/deluxe/towels-(2).jpg">
+        Bath Towel
+      </button></li>
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Bath Mat" data-images="" >
+       Bath Mat
+      </button></li>
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Bath Sheet" data-images="">
+       Bath Sheet
+      </button></li>
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Hand Towel" data-images="">
+        Hand Towel
+      </button></li>
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Tissue Toilet" data-images="../images/aviary/bintaro/rooms/deluxe/tissue-toilet.jpg">
+        Tissue Toilet
+      </button></li>
+
+    </ul> 
+  </div>
+
+  <div class="amenity-group" data-group>
+    <h3 class="amenity-title">Bathroom Amenities and Facilities (2)</h3>
+    
+    <h3 class="amenity-title">Wardrobe Care</h3>
+    <ul class="amenity-list">
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Bathrobes" data-images="">
+        Bathrobes
+      </button></li>
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Hairdryer" data-images="../images/aviary/bintaro/rooms/deluxe/hair-dryer.jpg">
+        Hairdryer
+      </button></li>
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Iron" data-images="">
+        Iron
+      </button></li>   
+      
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Ironboard" data-images="">
+        Ironboard
+      </button></li>  
+      
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Slippers" data-images="../images/aviary/bintaro/rooms/deluxe/slipper.jpg">
+        Slippers
+      </button></li>  
+
+    </ul>
+
+    <h3 class="amenity-title">Personal Grooming Accessories</h3>
+    <ul class="amenity-list">
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Comb" data-images="../images/aviary/bintaro/rooms/deluxe/comb.jpg">
+       Comb
+      </button></li>    
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Cotton Bud" data-images="../images/aviary/bintaro/rooms/deluxe/cotton-bud.jpg">
+        Cotton Bud
+      </button></li>      
+     
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Dental Kit" data-images="../images/aviary/bintaro/rooms/deluxe/dental-kit.jpg">
+        Dental Kit
+      </button></li>
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Shaving Kit" data-images="">
+        Shaving Kit
+      </button></li>      
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Shower Cap" data-images="../images/aviary/bintaro/rooms/deluxe/shower-cap.jpg">
+        Shower Cap
+      </button></li>
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Vanity Kit" data-images="">
+        Vanity Kit
+      </button></li>
+
+        </ul>
+
+    <h3 class="amenity-title">Hygiene and Convenience Items</h3>
+    <ul class="amenity-list">
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Laundry Bags" data-images="">
+        Laundry Bags
+      </button></li>
+
+       <li><button type="button" class="amenity-item amenity-link"
+        data-title="Sanitary Bag" data-images="../images/aviary/bintaro/rooms/deluxe/sanitary-bag.jpg">
+        Sanitary Bags
+      </button></li>
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Sewing Kits" data-images="">
+        Sewing Kits
+      </button></li>
+
+    </ul> 
+
+
+        <h3 class="amenity-title">Luxury and Specialized Add-ons</h3>
+    <ul class="amenity-list">
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Bath Salts and Oils" data-images="">
+        Bath Salts and Oils
+      </button></li>
+
+       <li><button type="button" class="amenity-item amenity-link"
+        data-title="Eye Masks" data-images="">
+        Eye Masks
+      </button></li>
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Hand Sanitizwers and Disinfectant Wipes" data-images="">
+        Hand Sanitizwers and Disinfectant Wipes
+      </button></li>
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Makeup Remover Wipes" data-images="">
+        Makeup Remover Wipes
+      </button></li>
+
+
+    </ul> 
+  </div>
+
+  <!-- =========================
+       FINISHING LANTAI
+  ========================== -->
+  <div class="amenity-group" data-group>
+    <h3 class="amenity-title">Interior</h3>
+    <h3 class="amenity-title">Floor</h3>
+    <ul class="amenity-list">
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Carpet" data-images="">
+        Carpet
+      </button></li>
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Ceramic on Entryway/Foyer" data-images="../images/aviary/bintaro/rooms/deluxe/floor-ceramic.jpg">
+        Ceramic
+      </button></li>      
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Granite" data-images="">
+        Granite
+      </button></li>     
+      
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Hardwood on Main Area" data-images="../images/aviary/bintaro/rooms/deluxe/floor-hardwood.jpg">
+        Hardwood
+      </button></li>
+  
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Laminated" data-images="">
+        Laminated
+      </button></li>
+  
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Marble" data-images="">
+        Marble
+      </button></li>
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Natural Stone (Slate, Lime Stone)" data-images="">
+        Natural Stone(Slate, Lime Stone)
+      </button></li>
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Polished Concrete" data-images="">
+        Polished Concrete
+      </button></li>
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Vinyl" data-images="">
+        Vinyl
+      </button></li>
+
+    </ul>
+    
+    <h3 class="amenity-title">Wall</h3>
+    <ul class="amenity-list">
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Ceramic" data-images="">
+        Ceramic
+      </button></li>
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Exposed Material" data-images="">
+        Exposed Material
+      </button></li>
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Paint" data-images="../images/aviary/bintaro/rooms/deluxe/paint-wall.jpg">
+        Paint
+      </button></li>
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Polished Concrete" data-images="">
+        Polished Concrete
+      </button></li>
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Stone Wall" data-images="">
+        Stone Wash Concrete
+      </button></li>
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Wall Paper" data-images="">
+        Wallpaper
+      </button></li>
+    </ul> 
+    
+    <h3 class="amenity-title">Ceiling</h3>
+    <ul class="amenity-list">
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Gypsum Noard" data-images="../images/aviary/bintaro/rooms/deluxe/">
+        Gypsum Board
+      </button></li>
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="PVC Panels" data-images="">
+        PVC Panels
+      </button></li>
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Timber (Wood)" data-images="">
+        Timber (Wood)
+      </button></li>
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Metal Ceilings" data-images="">
+        Metal Ceilings
+      </button></li>
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Mineral Fibre/Acoustic Tiles" data-images="">
+        Mineral Fire/Acoustic Tiles
+      </button></li>
+
+    </ul>
+  </div>
+
+  <!-- =========================
+       FIRE SAFETY
+  ========================== -->
+  <div class="amenity-group" data-group>
+    <h3 class="amenity-title">Fire Safety</h3>
+    <ul class="amenity-list">
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Automatic Sprinkler System" data-images="../images/aviary/bintaro/rooms/deluxe/sprinkler.jpg">
+        Automatic Sprinkler System
+      </button></li>
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Fire Extinguisher" data-images="">
+        Fire Extinguisher
+      </button></li>
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Frie-Resistant Door" data-images="">
+        Fire Extinguisher
+      </button></li>
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Heat Detector" data-images="">
+        Heat Detector
+      </button></li>
+
+      <li><button type="button" class="amenity-item amenity-link"
+        data-title="Smoke Detector" data-images="">
+        Smoke Detector
+      </button></li>
+
+
+    </ul>
+  </div>
+
+</div>
+<br>
+        <a href="../images/aviary/bintaro/pdf/deluxeroom-616.pdf" 
+
+          class="insight-download"
+          target="_blank"
+         rel="noopener">
+          <span class="icon">📄</span>
+          Download Room Checklist (PDF)
+        </a>
+
+        </section>
+      </article>
+
+      <!-- Footer (same vibe) -->
+      <footer>
+        <div class="tagline">Hotels as they really are. See the Hotel. Feel the Experience.</div>
+        <div>© Indonesian Hotels Insights</div>
+      </footer>
+
+    </main>
+  </div>
+
+  <!-- LIGHTBOX (single, reused for gallery + checklist items) -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-arrow lightbox-prev" id="lightbox-prev" aria-label="Previous">‹</div>
+    <button class="lightbox-close" aria-label="Close image">×</button>
+    
+    <div class="lightbox-content" role="dialog" aria-modal="true" aria-label="Evidence viewer">
+     <div class="lightbox-figure">
+      <img id="lightbox-image" hidden>
+      <video id="lightbox-video" controls hidden></video>
+    </div>
+
+      <div class="lightbox-title" id="lightbox-title"></div>
+    </div>
+
+    <div class="lightbox-arrow lightbox-next" id="lightbox-next" aria-label="Next">›</div>
+  </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  /* ============================================================
+     0) SMALL HELPERS
+  ============================================================ */
+
+  function parseImages(str){
+    if (!str) return [];
+    return str.split(",").map(s => s.trim()).filter(Boolean);
+  }
+
+  function isVideo(src){
+    return /\.(mp4|webm|ogg)$/i.test(src);
+  }
+
+  /* ============================================================
+     A) PHOTO EVIDENCE ALBUM (Booking-style gallery)
+     - main image + thumbs + prev/next
+     - click main image opens lightbox with full album set
+  ============================================================ */
+
+(function initRoomAlbumGallery(){
+  const mainImg    = document.getElementById("roomMainImg");
+  const caption    = document.getElementById("roomCaption");
+  const counter    = document.getElementById("roomCounter");
+  const thumbsWrap = document.getElementById("roomThumbs");
+  const prev       = document.getElementById("roomGPrev");
+  const next       = document.getElementById("roomGNext");
+
+  if (!mainImg || !thumbsWrap || !prev || !next || !caption || !counter) return;
+
+  const thumbs = Array.from(thumbsWrap.querySelectorAll(".thumb"));
+  if (!thumbs.length) return;
+
+  let index = thumbs.findIndex(t => t.classList.contains("is-active"));
+  if (index < 0) index = 0;
+
+  function setActive(i, doScroll = true){
+    index = (i + thumbs.length) % thumbs.length;
+
+    thumbs.forEach(t => t.classList.remove("is-active"));
+    const t = thumbs[index];
+    t.classList.add("is-active");
+
+    mainImg.src = t.getAttribute("data-full") || "";
+    caption.textContent = t.getAttribute("data-title") || "";
+    counter.textContent = `${index + 1} / ${thumbs.length}`;
+
+    // only scroll thumbnails when user interacts
+    if (doScroll) {
+      t.scrollIntoView({ behavior: "smooth", inline: "nearest", block: "nearest" });
+    }
+  }
+
+  thumbs.forEach((t, i) => t.addEventListener("click", () => setActive(i, true)));
+  prev.addEventListener("click", () => setActive(index - 1, true));
+  next.addEventListener("click", () => setActive(index + 1, true));
+
+  setActive(index, false); // no scroll on page load
+
+  // Click MAIN image -> open lightbox with full album list
+  mainImg.addEventListener("click", () => {
+    if (typeof openLightbox !== "function") return;
+
+    const images = thumbs.map(t => t.getAttribute("data-full") || "").filter(Boolean);
+
+    // IMPORTANT: keep same length/order as thumbs so index stays correct
+    const titles = thumbs.map(t => t.getAttribute("data-title") || "");
+
+    openLightbox(images, "Photo Evidence", index, titles);
+  });
+})();
+
+
+
+  /* ============================================================
+     B) LIGHTBOX EVIDENCE VIEWER (images + videos + zoom)
+     Used by:
+       - checklist buttons (.amenity-link)
+       - any .lightbox-img elements
+       - album main image (above)
+  ============================================================ */
+
+  const lightbox = document.getElementById("lightbox");
+  const imgEl    = document.getElementById("lightbox-image");
+  const vidEl    = document.getElementById("lightbox-video");
+  const titleEl  = document.getElementById("lightbox-title");
+  const prevBtn  = document.getElementById("lightbox-prev");
+  const nextBtn  = document.getElementById("lightbox-next");
+  const closeBtn = document.querySelector(".lightbox-close");
+
+  let currentImages = [];
+  let currentIndex  = 0;
+  let currentTitle  = "";
+  let currentTitles = []; // ✅ per-photo titles (album gallery)
+
+
+  // Zoom: use width resize (better scrolling than transform)
+  let isZoomed  = false;
+  let baseWidth = 0;
+
+  function resetZoom(){
+    isZoomed = false;
+    baseWidth = 0;
+    imgEl.style.width = "";
+    imgEl.style.maxWidth = "92vw";
+    imgEl.style.cursor = "zoom-in";
+  }
+
+  function zoomIn(){
+    if (!baseWidth) baseWidth = imgEl.getBoundingClientRect().width;
+    isZoomed = true;
+    imgEl.style.maxWidth = "none";
+    imgEl.style.width = (baseWidth * 1.8) + "px";
+    imgEl.style.cursor = "zoom-out";
+  }
+
+  function showMedia(src){
+    resetZoom(); // reset zoom whenever media changes
+
+    if (isVideo(src)) {
+      imgEl.hidden = true;
+
+      vidEl.hidden = false;
+      vidEl.src = src;
+      vidEl.play();
+      return;
+    }
+
+    // switch to image
+    vidEl.pause();
+    vidEl.src = "";
+    vidEl.hidden = true;
+
+    imgEl.hidden = false;
+    imgEl.src = src;
+  }
+
+  function updateTitle(){
+   const perPhoto = currentTitles[currentIndex] || "";
+   const prefix = perPhoto ? `${perPhoto} — ` : "";
+   titleEl.textContent = `${prefix}${currentTitle} (${currentIndex + 1} / ${currentImages.length})`; 
+  }
+
+function openLightbox(images, title, startIndex = 0, titles = []) {
+  currentImages = images || [];
+  currentTitles = titles || [];
+  currentTitle  = title || "Evidence";
+
+  currentIndex = Math.max(0, Math.min(startIndex, currentImages.length - 1));
+  if (!currentImages.length) return;
+
+  showMedia(currentImages[currentIndex]);
+  updateTitle();
+
+  lightbox.style.display = "flex";
+  lightbox.setAttribute("aria-hidden", "false");
+}
+
+
+  function closeLightbox(){
+    lightbox.style.display = "none";
+    lightbox.setAttribute("aria-hidden", "true");
+
+    resetZoom();
+
+    imgEl.src = "";
+    vidEl.pause();
+    vidEl.src = "";
+  }
+
+  function showPrev(){
+    if (!currentImages.length) return;
+    currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+    showMedia(currentImages[currentIndex]);
+    updateTitle();
+  }
+
+  function showNext(){
+    if (!currentImages.length) return;
+    currentIndex = (currentIndex + 1) % currentImages.length;
+    showMedia(currentImages[currentIndex]);
+    updateTitle();
+  }
+
+  // Image click = zoom toggle (only when image is showing)
+  imgEl.addEventListener("click", (e) => {
+    e.stopPropagation();
+    if (imgEl.hidden) return;
+
+    if (!isZoomed) zoomIn();
+    else resetZoom();
+  });
+
+  // Buttons
+  prevBtn?.addEventListener("click", (e) => { e.stopPropagation(); showPrev(); });
+  nextBtn?.addEventListener("click", (e) => { e.stopPropagation(); showNext(); });
+  closeBtn?.addEventListener("click", (e) => { e.stopPropagation(); closeLightbox(); });
+
+  // Overlay click close (outside content + not arrows)
+  lightbox?.addEventListener("click", (e) => {
+    const inside = e.target.closest(".lightbox-content");
+    const arrow  = e.target.closest(".lightbox-arrow");
+    if (!inside && !arrow) closeLightbox();
+  });
+
+  // Keyboard
+  document.addEventListener("keydown", (e) => {
+    if (lightbox.style.display !== "flex") return;
+    if (e.key === "Escape") closeLightbox();
+    if (e.key === "ArrowLeft") showPrev();
+    if (e.key === "ArrowRight") showNext();
+  });
+
+  // Any .lightbox-img opens lightbox (gallery tiles, etc.)
+document.querySelectorAll(".lightbox-img").forEach(el => {
+  el.addEventListener("click", () => {
+    const title  = el.getAttribute("data-title") || el.alt || "Photo";
+    const images = parseImages(el.getAttribute("data-images"));
+    openLightbox(images.length ? images : [el.src], title, 0, []);
+  });
+});
+
+
+
+  /* ============================================================
+     C) CHECKLIST EVIDENCE (show missing toggle supported)
+  ============================================================ */
+
+  function initChecklistEvidence(){
+    document.querySelectorAll(".amenity-link").forEach(btn => {
+      const imgs = parseImages(btn.getAttribute("data-images"));
+
+      // Missing evidence
+      if (!imgs.length) {
+        btn.classList.add("is-missing");
+        btn.disabled = true;
+
+        if (!btn.querySelector(".missing-tag")) {
+          const tag = document.createElement("span");
+          tag.className = "missing-tag";
+          tag.textContent = " (no evidence)";
+          btn.appendChild(tag);
+        }
+        return;
+      }
+
+      // Evidence available
+      btn.addEventListener("click", () => {
+        const title = btn.getAttribute("data-title") || btn.textContent.trim() || "Evidence";
+        openLightbox(imgs, title, 0);
+      });
+    });
+  }
+  initChecklistEvidence();
+
+  // Optional toggle: show missing items in editing mode
+  const toggle = document.getElementById("showMissingEvidence");
+  if (toggle) {
+    toggle.addEventListener("change", () => {
+      document.body.classList.toggle("show-missing", toggle.checked);
+    });
+  }
+
+});
+</script>
+
+</body>
+</html>

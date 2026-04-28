@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Indonesian Hotels Insights</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <section class="hero">
+    <h1>Hotels, as They Really Are.<br>See the Hotel. Feel the Experience.</h1>
+    <div class="search-box">
+    <select id="cityDropdown" onchange="filterHotels()">
+      <option value="">All cities</option>
+      <option value="Bintaro">Bintaro</option>
+      <option value="Jakarta">Jakarta</option>
+      <option value="Bandung">Bandung</option>
+    </select>
+     <div class="input-wrapper">
+       <input type="text" id="searchInput" placeholder="Search hotel/city name..." onkeyup="filterHotels()">
+       <button id="clearSearch">x</button>
+     </div>
+    </div>
+  </section>
+
+
+  <section class="featured">
+  
+    <div class="hotel-grid">
+     
+    
+     <a href="hotels/aviary-bintaro.html" class="hotel-card" data-city="Bintaro">
+       <img src="images/aviary-bintaro.jpg" alt="Aviary Bintaro" />
+        <div class="hotel-info">
+          <h3>Aviary Bintaro</h3>
+          <p>Modern eco-friendly urban stay in South Tangerang. Vibrant, stylish, and family-friendly.</p>
+       </div>
+     </a>
+
+     <a href="hotels/jambuluwuk-thamrin.html" class="hotel-card" data-city="Jakarta">
+       <img src="images/jambuluwuk-thamrin.jpg" alt="Jambuluwuk Thamrin Jakarta" />
+        <div class="hotel-info">
+          <h3>Jambuluwuk Thamrin Jakarta</h3>
+          <p>A blend of local warmth and city sophistication located in the heart of Jakarta.</p>
+        </div>
+     </a>
+
+    <a href="papandayan-bandung.html" class="hotel-card" data-city="Bandung">
+     <img src="images/papandayan-bandung.jpg" alt="Hotel Papandayan Bandung" />
+     <div class="hotel-info">
+     <h3>Papandayan Bandung</h3>
+     <p>Elegant Bandung hospitality with timeless architecture and lush gardens.</p>
+   </div>
+  </a>
+ 
+       <a href="Tentrem-Yogya.html" class="hotel-card" data-city="Bandung">
+         <img src="images/tentrem-yogya.jpg" alt="Tentrem-yogya" />
+          <div class="hotel-info">
+           <h3>Tentrem Yogya</h3>
+           <p> </p>
+         </div>
+       </a>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+     <nav>
+      <a href="#">Home</a>
+      <a href="#">Hotels</a>
+      <a href="#">Search</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+    Bringing Indonesian Hotels into View
+    <br>
+    © 2025 Indonesian Hotels Insights
+  </footer>
+
+<!-- Script to load Bandung hotels from CSV -->
+<script>
+let bandungHotels = [];
+
+// ---------------- Load CSV with header detection ----------------
+async function loadBandungHotels() {
+  try {
+    const response = await fetch('data/bandung_hotels_5star.csv');
+    const data = await response.text();
+    const [header, ...rows] = data.split('\n').filter(line => line.trim());
+    const headers = header.split(',').map(h => h.trim());
+
+    bandungHotels = rows.map(row => {
+      const cols = row.split(',').map(c => c.trim());
+      const record = {};
+      headers.forEach((h, i) => (record[h] = cols[i]));
+
+      // --- Validate image URL ---
+      let image = record.image_url?.trim() || '';
+      if (
+        !image.toLowerCase().endsWith('.jpg') &&
+        !image.toLowerCase().endsWith('.png')
+      ) {
+        image = 'images/placeholder.jpg';
+      }
+
+      return {
+        name: record.hotel_name,
+        city: record.city,
+        star: record.star_rating,
+        description: record.description || '',
+        image
+          };
+    });
+  } catch (error) {
+    console.error('Error loading hotels:', error);
+  }
+}
+
+// ---------------- Render Hotels from CSV dynamically ----------------
+function renderHotels(city, searchTerm) {
+  const hotelGrid = document.querySelector('.hotel-grid');
+  const existingDynamic = document.querySelectorAll('.hotel-card.dynamic');
+  existingDynamic.forEach(card => card.remove());
+
+  if (!city && !searchTerm) return;
+
+  const filtered = bandungHotels.filter(h =>
+    (!city || h.city.toLowerCase() === city.toLowerCase()) &&
+    (!searchTerm || h.name.toLowerCase().includes(searchTerm.toLowerCase()))
+  );
+
+  filtered.forEach(hotel => {
+    const card = document.createElement('div');
+    card.className = 'hotel-card dynamic';
+    card.dataset.city = hotel.city;
+    card.innerHTML = `
+      <img src="${hotel.image}" alt="${hotel.image}" />
+      <div class="hotel-info">
+        <h3>${hotel.name}</h3>
+        <p>${hotel.description}</p>
+        <p><strong>${hotel.city}</strong> — ${hotel.star}★</p>
+      </div>
+    `;
+    hotelGrid.appendChild(card);
+  });
+}
+
+// ---------------- Filter Function ----------------
+function filterHotels() {
+  const city = document.getElementById('cityDropdown').value.toLowerCase();
+  const search = document.getElementById('searchInput').value.toLowerCase().trim();
+
+  // --- Static featured hotels (always visible if no filter) ---
+  const staticCards = document.querySelectorAll('.hotel-card:not(.dynamic)');
+  staticCards.forEach(card => {
+    const name = card.querySelector('h3').textContent.toLowerCase();
+    const matchSearch = !search || name.includes(search);
+    const matchCity = !city || card.dataset.city.toLowerCase() === city;
+
+    card.style.display =
+      (city === '' && !search) || (matchCity && matchSearch) ? 'block' : 'none';
+  });
+
+  // --- Dynamic (CSV) hotels ---
+  renderHotels(city, search);
+}
+
+// ---------------- Setup & Clear Button ----------------
+document.addEventListener('DOMContentLoaded', async () => {
+  await loadBandungHotels();
+
+  const searchInput = document.getElementById('searchInput');
+  const cityDropdown = document.getElementById('cityDropdown');
+
+  let clearButton = document.getElementById('clearSearch');
+  if (!clearButton) {
+    clearButton = document.createElement('button');
+    clearButton.id = 'clearSearch';
+    clearButton.textContent = '✖';
+    clearButton.style.position = 'absolute';
+    clearButton.style.right = '10px';
+    clearButton.style.top = '50%';
+    clearButton.style.transform = 'translateY(-50%)';
+    clearButton.style.background = 'transparent';
+    clearButton.style.border = 'none';
+    clearButton.style.color = '#555';
+    clearButton.style.fontSize = '18px';
+    clearButton.style.cursor = 'pointer';
+    clearButton.style.display = 'none';
+    searchInput.parentElement.style.position = 'relative';
+    searchInput.parentElement.appendChild(clearButton);
+  }
+
+  searchInput.addEventListener('input', () => {
+    clearButton.style.display = searchInput.value ? 'block' : 'none';
+    filterHotels();
+  });
+
+  clearButton.addEventListener('click', () => {
+    searchInput.value = '';
+    cityDropdown.value = '';
+    clearButton.style.display = 'none';
+    filterHotels();
+  });
+
+  cityDropdown.addEventListener('change', filterHotels);
+});
+</script>
+</body>
+</html>

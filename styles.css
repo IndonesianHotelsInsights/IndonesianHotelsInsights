@@ -217,12 +217,12 @@ search-box {
     overflow-x: auto;
     justify-content: flex-start;
     gap: 18px;
-    padding: 0 16px 24px;
+    padding: 0 14px 24px;
     scroll-snap-type: x mandatory;
   }
 
   .hotel-card {
-    flex: 0 0 78%;
+    flex: 0 0 75%;
     scroll-snap-align: center;
   }
 
@@ -230,4 +230,5 @@ search-box {
     padding: 14px 10px;
     font-size: 0.85rem;
   }
+
 }

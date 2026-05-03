@@ -62,14 +62,19 @@ h1, h2, h3, h4, h5 {
 }
 
 .nav a {
-  color: var(--text-main);
+  color: white;
   font-size: 0.9rem;
   text-decoration: none;
   padding: 0.35rem 0;
-}
+ }
 
 .nav a:hover {
   text-decoration: underline;
+}
+
+.nav a,
+.nav a:visited {
+  color: white;
 }
 
 .top-bar{

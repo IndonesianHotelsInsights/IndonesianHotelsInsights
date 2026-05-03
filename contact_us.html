@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Contact Us | Indonesian Hotels Insights</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <main class="contact-page">
+    <section class="contact-box">
+      <h1>Contact Us</h1>
+
+      <p>
+        For professional enquiries related to hotel documentation, property context,
+        or Indonesian Hotels Insights, please use the form below.
+      </p>
+
+      <form action="https://formspree.io/f/mzdodjvq" method="POST">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+
+      <a class="back-link" href="index.html">← Back to Homepage</a>
+    </section>
+  </main>
+
+</body>
+</html>

@@ -1218,6 +1218,17 @@ body.show-missing .amenity-link.is-missing{
 #facilityImage{
   cursor: zoom-in;
 }
+
+.nearby-video iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 10px;
+  margin-top: 8px;
+}
+
+
+
 /* MOBILE NAV BAR */
 .mobile-nav {
   display: none;

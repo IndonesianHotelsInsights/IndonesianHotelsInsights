@@ -13,10 +13,26 @@
   <div class="shell">
     <!-- HEADER (same pattern) -->
     <header class="top-bar">
+      
+       <!-- MOBILE TOP BAR -->
+  <div class="mobile-nav">
+    <div class="mobile-logo">Indonesian Hotels Insights</div>
+    <button class="menu-toggle">☰</button>
+  </div>
+
+  <!-- MOBILE DROPDOWN -->
+  <ul class="mobile-menu">
+    <li><a href="../hotels/aviary-bintaro.html#rooms">Back to Hotel Page</a></li>
+    <li><a href="#room-video">Room Overview</a></li>
+    <li><a href="#room-gallery">Photo Evidence</a></li>
+    <li><a href="#room-checklist">Room Checklist</a></li>
+  </ul> 
+      
+      
       <div class="brand">Indonesian Hotels Insights</div>
       <nav class="nav">
         <a href="../index.html">Home</a>
-        <a href="../hotels/aviary-bintaro.html#rooms">Back to Rooms</a>
+        <a href="../hotels/aviary-bintaro.html#rooms">Back to Hotel Page</a>
         <a href="#room-video">Room Video</a>
         <a href="#room-gallery">Photo Evidence</a>
         <a href="#room-checklist">Room Checklist</a>
@@ -1002,6 +1018,32 @@ document.querySelectorAll(".lightbox-img").forEach(el => {
 
 });
 </script>
+<script>
+  const toggle = document.querySelector(".menu-toggle");
+  const menu = document.querySelector(".mobile-menu");
+  const links = document.querySelectorAll(".mobile-menu a");
 
+  if (toggle && menu) {
+
+    toggle.addEventListener("click", () => {
+
+      menu.classList.toggle("show");
+
+      toggle.textContent =
+        menu.classList.contains("show") ? "✕" : "☰";
+
+    });
+
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+
+        menu.classList.remove("show");
+        toggle.textContent = "☰";
+
+      });
+    });
+
+  }
+</script>
 </body>
 </html>

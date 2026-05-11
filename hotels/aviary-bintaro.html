@@ -13,23 +13,21 @@
     <!-- HEADER -->
     <header class="top-bar">
         <!-- MOBILE NAV -->
-  <div class="mobile-nav">
-    <div class="logo">Indonesian Hotels Insights</div>
-    <div class="menu-toggle">☰</div>
+  
+        <div class="mobile-nav">
+    <div class="mobile-logo">Indonesian Hotels Insights</div>
+    <button class="menu-toggle">☰</button>
   </div>
 
-  <!-- MOBILE DROPDOWN -->
   <ul class="mobile-menu">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Property Description</a></li>
-    <li><a href="#">Location</a></li>
-    <li><a href="#">Surrounding Location</a></li>
-    <li><a href="#">Guest Facilities</a></li>
-    <li><a href="#">Rooms</a></li>
-    <li><a href="#">Nearby Experiences</a></li>
-  </ul>
-      
-      
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#property-description">Property Description</a></li>
+    <li><a href="#location">Location</a></li>
+    <li><a href="#surrounding-location">Surrounding Location</a></li>
+    <li><a href="#guest-facilities">Guest Facilities</a></li>
+    <li><a href="#rooms">Rooms</a></li>
+    <li><a href="#nearby-experiences">Nearby Experiences</a></li>
+  </ul>  
       
       <div class="brand">Indonesian Hotels Insights</div>
         <nav class="nav">
@@ -1711,7 +1709,7 @@
              
 <div class="nearby-video">
   <iframe
-    src="https://www.youtube.com/embed/sebD2TDzOB4"
+    src="https://www.youtube.com/embed/pKp4jUvqZjc"
     title="PHR Vinyl Store Observation"
     loading="lazy"
     allowfullscreen>
@@ -2297,7 +2295,25 @@ function openZoom(){
 });
 </script>
 
+<script>
+  const toggle = document.querySelector(".menu-toggle");
+  const menu = document.querySelector(".mobile-menu");
+  const links = document.querySelectorAll(".mobile-menu a");
 
+  if (toggle && menu) {
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("show");
+      toggle.textContent = menu.classList.contains("show") ? "✕" : "☰";
+    });
+
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        menu.classList.remove("show");
+        toggle.textContent = "☰";
+      });
+    });
+  }
+</script>
 
 
 </body>

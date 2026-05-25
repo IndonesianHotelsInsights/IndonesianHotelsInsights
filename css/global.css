@@ -226,6 +226,22 @@ h1, h2, h3, h4, h5 {
   line-height: 1.6;
 }
 
+.insight-text a,
+.insight-text a:link,
+.insight-text a:visited,
+.insight-bullets a,
+.insight-bullets a:link,
+.insight-bullets a:visited {
+  color: #7a3f2a !important;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.insight-text a:hover,
+.insight-bullets a:hover {
+  color: #5f2f20 !important;
+}
+
 .insight-left .insight-text {
   line-height: 1.55;
   margin-bottom: 4px;
@@ -246,6 +262,17 @@ h1, h2, h3, h4, h5 {
   list-style-type: disc;
   margin: 4px 0 4px 20px;
   padding: 0;
+}
+
+.insight-bullets a,
+.insight-bullets a:visited {
+  color: #7a3f2a;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.insight-bullets a:hover {
+  color: #5f2f20;
 }
 
 .insight-split {
@@ -738,6 +765,38 @@ footer .tagline {
   border:1px solid rgba(0,0,0,0.12);
   padding:8px 10px;   
   vertical-align: top;
+}
+
+/* Facility table links/buttons */
+.facility-link {
+  font: inherit;
+  font-size: 0.92rem;
+  background: none;
+  border: none;
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
+  text-decoration: underline;
+  color: #7a3f2a !important;
+  font-weight: 600;
+}
+
+.facility-link:hover {
+  color: #5f2f20 !important;
+  opacity: 0.9;
+}
+
+
+.facility-table a,
+.facility-table a:link,
+.facility-table a:visited {
+  color: #7a3f2a !important;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.facility-table a:hover {
+  color: #5f2f20 !important;
 }
 
 /* Make the facility name look like a link but stay as a button */
@@ -1376,4 +1435,23 @@ body.show-missing .amenity-link.is-missing{
 #rooms,
 #nearby-experiences {
   scroll-margin-top: 50px;
+}
+
+.map-box {
+  width: 100%;
+  border: 1px solid #d8d0c3;
+  background: #f7f1e8;
+  overflow: hidden;
+}
+
+.map-box iframe {
+  display: block;
+  width: 100%;
+}
+
+.map-note {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #6b6258;
 }

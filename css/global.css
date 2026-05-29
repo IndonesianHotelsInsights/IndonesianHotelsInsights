@@ -184,7 +184,8 @@ h1, h2, h3, h4, h5 {
 }
 
 .insights-section {
-  margin-top: 2.4rem;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .insight-card {
@@ -351,6 +352,12 @@ h1, h2, h3, h4, h5 {
   width: 100%;
 }
 
+.media-card.video-narrow {
+  max-width: 720px;
+  margin: 10px auto 18px;
+  padding: 16px;
+}
+
 .media-card.video-narrow .media-thumb {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -362,25 +369,6 @@ h1, h2, h3, h4, h5 {
   height: 100%;
   display: block;
   border: 0;
-}
-
-.video-narrow {
-  margin: 0 auto 18px;
-  max-width: 720px;
-}
-
-.video-narrow .media-thumb {
-  padding-top: 56.25%;
-  position: relative;
-}
-
-.video-narrow iframe {
-  border: none;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
 }
 
 
@@ -1469,3 +1457,4 @@ body.show-missing .amenity-link.is-missing{
   line-height: 1.5;
   color: #6b6258;
 }
+

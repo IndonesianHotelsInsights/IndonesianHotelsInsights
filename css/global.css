@@ -351,10 +351,17 @@ h1, h2, h3, h4, h5 {
   width: 100%;
 }
 
+.media-card.video-narrow {
+  max-width: 720px;
+  margin: 10px auto 18px;
+  padding: 8px;
+}
+
 .media-card.video-narrow .media-thumb {
   width: 100%;
   aspect-ratio: 16 / 9;
   overflow: hidden;
+  position: relative;
 }
 
 .media-card.video-narrow .media-thumb iframe {
@@ -362,6 +369,17 @@ h1, h2, h3, h4, h5 {
   height: 100%;
   display: block;
   border: 0;
+}
+
+@media (max-width: 600px) {
+  .media-card.video-narrow {
+    max-width: 100%;
+    padding: 8px;
+  }
+
+  .media-card.video-narrow .media-thumb {
+    aspect-ratio: 4 / 3;
+  }
 }
 
 

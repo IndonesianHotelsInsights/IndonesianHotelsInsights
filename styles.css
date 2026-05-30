@@ -315,3 +315,17 @@ footer a {
     font-size: 0.85rem;
   }
 }
+
+.mockup-link {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: #7a3f2a;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.mockup-link:hover {
+  opacity: 0.9;
+}

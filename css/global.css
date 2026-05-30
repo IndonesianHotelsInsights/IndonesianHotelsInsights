@@ -1470,3 +1470,22 @@ body.show-missing .amenity-link.is-missing{
   color: #6b6258;
 }
 
+@media (max-width: 600px) {
+  .facilities-table th,
+  .facilities-table td {
+    padding: 14px 10px;
+    font-size: 0.95rem;
+    line-height: 1.35;
+    vertical-align: top;
+  }
+
+  .facilities-table th:first-child,
+  .facilities-table td:first-child {
+    width: 42%;
+  }
+
+  .facilities-table th:last-child,
+  .facilities-table td:last-child {
+    width: 58%;
+  }
+}

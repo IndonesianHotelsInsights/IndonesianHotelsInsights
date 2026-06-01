@@ -1548,9 +1548,8 @@
 <!--../rooms/aviary-bintaro-junior-flat.html-->
 <article class="room-card room-unverified room-disabled">
   <div class="room-thumb">
-    <img src="../images/aviary/bintaro/rooms/junior-flat/placeholder.jpg"
+     <img src="../images/placeholders/room-not-surveyed.jpg"
          alt="Junior Flat Room – Not yet surveyed" />
-    <div class="room-overlay">Not Yet Surveyed</div>
   </div>
   <div class="room-name">Junior Flat Room</div>
   <div class="room-status">Survey planned Q3 2027</div>
@@ -1560,10 +1559,9 @@
 <!--../rooms/aviary-bintaro-premiere-flat.html-->
 <article class="room-card room-unverified room-disabled">
   <div class="room-thumb">
-    <img src="../images/aviary/bintaro/rooms/premier-flat/placeholder.jpg"
+    <img src="../images/placeholders/room-not-surveyed.jpg"
          alt="Premier Flat Room – Not yet surveyed" />
-    <div class="room-overlay">Not Yet Surveyed</div>
-  </div>
+   </div>
   <div class="room-name">Premier Flat Room</div>
   <div class="room-status">Survey planned Q3 2027</div>
 </article>
@@ -1573,9 +1571,8 @@
 <!--href="../rooms/aviary-bintaro-executive-suite.html"-->
 <article class="room-card room-unverified room-disabled">
   <div class="room-thumb">
-    <img src="../images/aviary/bintaro/rooms/executive-suite/placeholder.jpg"
+    <img src="../images/placeholders/room-not-surveyed.jpg"
          alt="Executive Suite – Not yet surveyed" />
-    <div class="room-overlay">Not Yet Surveyed</div>
   </div>
   <div class="room-name">Executive Suite</div>
   <div class="room-status">Survey planned Q3 2027</div>
@@ -1584,9 +1581,8 @@
 <!--href="../rooms/aviary-bintaro-luxury-suite.html-->
 <article class="room-card room-unverified room-disabled">
   <div class="room-thumb">
-    <img src="../images/aviary/bintaro/rooms/luxury-suite/placeholder.jpg"
+    <img src="../images/placeholders/room-not-surveyed.jpg"
          alt="Luxury Suite – Not yet surveyed" />
-    <div class="room-overlay">Not Yet Surveyed</div>
   </div>
   <div class="room-name">Luxury Suite</div>
   <div class="room-status">Survey planned Q3 2027</div>
@@ -1596,9 +1592,8 @@
 <!--href="../rooms/aviary-bintaro-aviary-suite.html"-->
 <article class="room-card room-unverified room-disabled">
   <div class="room-thumb">
-    <img src="../images/aviary/bintaro/rooms/aviary-suite/placeholder.jpg"
+    <img src="../images/placeholders/room-not-surveyed.jpg"
          alt="Aviary Suite – Not yet surveyed" />
-    <div class="room-overlay">Not Yet Surveyed</div>
   </div>
   <div class="room-name">Aviary Suite</div>
   <div class="room-status">Survey planned Q3 2027</div>
@@ -2006,81 +2001,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Init (no scroll)
     setActive(0, { scrollThumb: false });
   })();
-</script>
-
-
-<script>
-  const lb = document.getElementById('amenityLightbox');
-  const lbImg = document.getElementById('lbImg');
-  const lbTitle = document.getElementById('lbTitle');
-  const lbTip = document.getElementById('lbTip');
-  const lbCounter = document.getElementById('lbCounter');
-  const btnClose = lb.querySelector('.lbclose');
-  const btnPrev = lb.querySelector('.lbprev');
-  const btnNext = lb.querySelector('.lbnext');
-
-  let currentImages = [];
-  let currentIndex = 0;
-
-  function openLightbox(title, images, tip){
-    currentImages = images.filter(Boolean);
-    currentIndex = 0;
-
-    lbTitle.textContent = title || 'Evidence';
-    lbTip.textContent = tip || '';
-
-    if (!currentImages.length){
-      lbImg.src = '';
-      lbImg.alt = 'No evidence image linked';
-      lbCounter.textContent = '0 / 0';
-    } else {
-      lbImg.src = currentImages[currentIndex];
-      lbImg.alt = title || 'Evidence image';
-      lbCounter.textContent = `${currentIndex + 1} / ${currentImages.length}`;
-    }
-
-    lb.classList.add('is-open');
-    lb.setAttribute('aria-hidden', 'false');
-  }
-
-  function closeLightbox(){
-    lb.classList.remove('is-open');
-    lb.setAttribute('aria-hidden', 'true');
-    currentImages = [];
-    currentIndex = 0;
-    lbImg.src = '';
-  }
-
-  function step(dir){
-    if (!currentImages.length) return;
-    currentIndex = (currentIndex + dir + currentImages.length) % currentImages.length;
-    lbImg.src = currentImages[currentIndex];
-    lbCounter.textContent = `${currentIndex + 1} / ${currentImages.length}`;
-  }
-
-  document.querySelectorAll('.amenity-link').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const title = btn.dataset.title || btn.textContent.trim();
-      const tip = btn.dataset.tip || '';
-      const imgs = (btn.dataset.images || '').split(',').map(s => s.trim()).filter(Boolean);
-      openLightbox(title, imgs, tip);
-    });
-  });
-
-  btnClose.addEventListener('click', closeLightbox);
-  btnPrev.addEventListener('click', () => step(-1));
-  btnNext.addEventListener('click', () => step(1));
-
-  lb.addEventListener('click', (e) => {
-    if (e.target === lb) closeLightbox();
-  });
-
-  document.addEventListener('keydown', (e) => {
-    if (!lb.classList.contains('is-open')) return;
-    if (e.key === 'Escape') closeLightbox();
-    if (e.key === 'ArrowLeft') step(-1);
-    if (e.key === 'ArrowRight') step(1);
-  });
 </script>
 
 

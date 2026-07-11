@@ -329,3 +329,34 @@ footer a {
 .mockup-link:hover {
   opacity: 0.9;
 }
+
+.contact-note {
+  text-align: center;
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+.social-links {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.social-links a {
+  color: #555;
+  font-size: 1.8rem;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #000;
+}
+
+.fa-youtube {
+  color: #FF0000;
+}
+
+.fa-linkedin {
+  color: #0A66C2;
+}

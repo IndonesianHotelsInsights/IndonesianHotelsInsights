@@ -215,6 +215,12 @@ h1, h2, h3, h4, h5 {
   gap: 0.7rem;
 }
 
+.insight-right1 {
+  position: sticky;
+  top: 20px;
+  align-self: flex-start;
+}
+
 .insight-title {
   font-size: 1rem;
   font-weight: 600;
@@ -1314,6 +1320,16 @@ body.show-missing .amenity-link.is-missing{
   object-fit: cover;     /* crop nicely */
   display: block;
 }
+
+.facility-note {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #666;
+}
+
+
 
 /* ===========================
    MOBILE NAVIGATION

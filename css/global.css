@@ -1329,6 +1329,16 @@ body.show-missing .amenity-link.is-missing{
   color: #666;
 }
 
+.official-website {
+    margin-top: 40px;
+}
+
+.official-website p {
+    max-width: 700px;
+    line-height: 1.7;
+    margin-top: 12px;
+    margin-bottom: 18px;
+}
 
 
 /* ===========================
